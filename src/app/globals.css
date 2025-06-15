@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* 无衬线字体 */
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-red text-white px-4 py-2 rounded hover:opacity-90;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary-blue text-white px-4 py-2 rounded hover:opacity-90;
+  }
+} 
