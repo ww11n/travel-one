@@ -1,13 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAttractionById, incrementAttractionPopularity } from '@/lib/api/attractions';
 
-interface Params {
-  params: {
-    id: string;
-  };
-}
-
-export async function GET(req: NextRequest, { params }: Params) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
   try {
     const { id } = params;
     
